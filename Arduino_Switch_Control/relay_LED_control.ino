@@ -13,6 +13,7 @@ char relay2state = 0;
 char relay3state = 0;
 char relay4state = 0;
 
+  
 void setup() {
   Serial.begin(9600);
   BTSerial.begin(9600);
@@ -49,35 +50,27 @@ void loop() {
     switch(command){
      case '1':
       digitalWrite(relay1, LOW);
-      BTSerial.write(msg);
       break;
     case '2':
       digitalWrite(relay1, HIGH);
-      BTSerial.write(msg);
       break;
     case '3':
       digitalWrite(relay2, LOW);
-      BTSerial.write(msg);
       break;
     case '4': 
       digitalWrite(relay2, HIGH);
-      BTSerial.write(msg);
       break;
     case '5':
       digitalWrite(relay3, LOW);
-      BTSerial.write(msg);
       break;
     case '6':
       digitalWrite(relay3, HIGH);
-      BTSerial.write(msg);
       break;
     case '7':
       digitalWrite(relay4, LOW);
-      BTSerial.write(msg);
       break;
     case '8':
       digitalWrite(relay4, HIGH);
-      BTSerial.write(msg);
       break;
     case '0':
       BTSerial.write(msg);
